@@ -11,82 +11,157 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
-                <div class="position-relative image-hover">
-                  <img
-                    src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/travel.jpg"
-                    class="img-fluid"
-                    alt="world-news"
-                  />
-                  <span class="thumb-title">TRAVEL</span>
-                </div>
+
+              
+            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+                <?php 
+                
+                $worldPosts = new WP_Query(array(
+
+                  'posts_per_page' => 1,
+                  'category_name' => 'Health'
+
+                ));
+
+                while ($worldPosts->have_posts()) {
+                  $worldPosts->the_post(); ?>
+
+<div class="position-relative image-hover">
+                  <img src="<?php
+if ( has_post_thumbnail() ) { 
+the_post_thumbnail( 'medium' );
+}
+?>" />
+                  <span class="thumb-title">HEALTH</span>
+            </div>  
+                
                 <h5 class="font-weight-bold mt-3">
-                  Refugees flood Turkey's border with Greece
+                  <?php the_title( ); ?>
                 </h5>
                 <p class="fs-15 font-weight-normal">
-                  Lorem Ipsum has been the industry's standard dummy text
+                <?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
                 </p>
                 <a href="#" class="font-weight-bold text-dark pt-2"
-                  >Read Article</a
-                >
-              </div>
-              <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
-                <div class="position-relative image-hover">
-                  <img
-                    src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/news.jpg"
-                    class="img-fluid"
-                    alt="world-news"
-                  />
-                  <span class="thumb-title">NEWS</span>
-                </div>
-                <h5 class="font-weight-bold mt-3">
-                  South Korea’s Moon Jae-in sworn in vowing address
-                </h5>
-                <p class="fs-15 font-weight-normal">
-                  Lorem Ipsum has been the industry's standard dummy text
-                </p>
-                <a href="#" class="font-weight-bold text-dark pt-2"
-                  >Read Article</a
-                >
-              </div>
-              <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
-                <div class="position-relative image-hover">
-                  <img
-                    src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/art.jpg"
-                    class="img-fluid"
-                    alt="world-news"
-                  />
-                  <span class="thumb-title">ART</span>
-                </div>
-                <h5 class="font-weight-bold mt-3">
-                  These puppies are training to assist in avalanche rescue
-                </h5>
-                <p class="fs-15 font-weight-normal">
-                  Lorem Ipsum has been the industry's standard dummy text
-                </p>
-                <a href="#" class="font-weight-bold text-dark pt-2"
-                  >Read Article</a
-                >
-              </div>
-              <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
-                <div class="position-relative image-hover">
-                  <img
-                    src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/business.jpg"
-                    class="img-fluid"
-                    alt="world-news"
-                  />
-                  <span class="thumb-title">BUSINESS</span>
-                </div>
-                <h5 class="font-weight-bold mt-3">
-                  'Love Is Blind' couple opens up about their first year
-                </h5>
-                <p class="fs-15 font-weight-normal">
-                  Lorem Ipsum has been the industry's standard dummy text
-                </p>
-                <a href="#" class="font-weight-bold text-dark pt-2"
-                  >Read Article</a
-                >
-              </div>
+                  >Read Article</a>
+              
+              <?php } ?>
+
+            </div>
+              
+            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+<?php 
+
+$worldPosts = new WP_Query(array(
+
+  'posts_per_page' => 1,
+  'category_name' => 'Wellness'
+
+));
+
+while ($worldPosts->have_posts()) {
+  $worldPosts->the_post(); ?>
+
+<div class="position-relative image-hover">
+  <img src="<?php
+if ( has_post_thumbnail() ) { 
+the_post_thumbnail( 'medium' );
+}
+?>" />
+  <span class="thumb-title">WELLNESS</span>
+</div>  
+
+<h5 class="font-weight-bold mt-3">
+  <?php the_title( ); ?>
+</h5>
+<p class="fs-15 font-weight-normal">
+<?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+</p>
+<a href="#" class="font-weight-bold text-dark pt-2"
+  >Read Article</a>
+
+<?php } ?>
+
+</div>
+              
+<div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+<?php 
+
+$worldPosts = new WP_Query(array(
+
+  'posts_per_page' => 1,
+  'category_name' => 'Friendship'
+
+));
+
+while ($worldPosts->have_posts()) {
+  $worldPosts->the_post(); ?>
+
+<div class="position-relative image-hover">
+  <img src="<?php
+if ( has_post_thumbnail() ) { 
+the_post_thumbnail( 'medium' );
+}
+?>" />
+  <span class="thumb-title">FRIENDSHIP</span>
+</div>  
+
+<h5 class="font-weight-bold mt-3">
+  <?php the_title( ); ?>
+</h5>
+<p class="fs-15 font-weight-normal">
+<?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+</p>
+<a href="#" class="font-weight-bold text-dark pt-2"
+  >Read Article</a>
+
+<?php } ?>
+
+</div>
+              
+<div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+<?php 
+
+$worldPosts = new WP_Query(array(
+
+  'posts_per_page' => 1,
+  'category_name' => 'Film'
+
+));
+
+while ($worldPosts->have_posts()) {
+  $worldPosts->the_post(); ?>
+
+<div class="position-relative image-hover">
+  <img src="<?php
+if ( has_post_thumbnail() ) { 
+the_post_thumbnail( 'medium' );
+}
+?>" />
+  <span class="thumb-title">FILM</span>
+</div>  
+
+<h5 class="font-weight-bold mt-3">
+  <?php the_title( ); ?>
+</h5>
+<p class="fs-15 font-weight-normal">
+<?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+</p>
+<a href="#" class="font-weight-bold text-dark pt-2"
+  >Read Article</a>
+
+<?php } ?>
+
+</div>
+            
+            
             </div>
           </div>
           <div class="editors-news">
