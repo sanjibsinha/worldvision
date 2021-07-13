@@ -10,32 +10,144 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+
+      <div class="row">
 
               
             <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
 
-                <?php 
+                  <?php 
+                  
+                  $worldPosts = new WP_Query(array(
+
+                    'posts_per_page' => 1,
+                    'category_name' => 'Health'
+
+                  ));
+
+                      while ($worldPosts->have_posts()) {
+                      $worldPosts->the_post(); ?>
+
+                    <div class="position-relative image-hover">
+                                        <img src="<?php
+                      if ( has_post_thumbnail() ) { 
+                      the_post_thumbnail( 'medium' );
+                      }
+                      ?>" />
+                        <span class="thumb-title">HEALTH</span>
+                    </div>  
+                  
+                  <h5 class="font-weight-bold mt-3">
+                    <?php the_title( ); ?>
+                  </h5>
+                  <p class="fs-15 font-weight-normal">
+                  <?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+                  </p>
+                  <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
+                    >Read Article</a>
                 
+                <?php } ?>
+
+            </div>
+              
+            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+              <?php 
+
+              $worldPosts = new WP_Query(array(
+
+                'posts_per_page' => 1,
+                'category_name' => 'Wellness'
+
+              ));
+
+              while ($worldPosts->have_posts()) {
+                $worldPosts->the_post(); ?>
+
+              <div class="position-relative image-hover">
+                <img src="<?php
+              if ( has_post_thumbnail() ) { 
+              the_post_thumbnail( 'medium' );
+              }
+              ?>" />
+                <span class="thumb-title">WELLNESS</span>
+              </div>  
+
+              <h5 class="font-weight-bold mt-3">
+                <?php the_title( ); ?>
+              </h5>
+              <p class="fs-15 font-weight-normal">
+              <?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+              </p>
+              <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
+                >Read Article</a>
+
+              <?php } ?>
+
+            </div>
+              
+            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+              <?php 
+
+              $worldPosts = new WP_Query(array(
+
+                'posts_per_page' => 1,
+                'category_name' => 'Friendship'
+
+              ));
+
+              while ($worldPosts->have_posts()) {
+                $worldPosts->the_post(); ?>
+
+              <div class="position-relative image-hover">
+                <img src="<?php
+              if ( has_post_thumbnail() ) { 
+              the_post_thumbnail( 'medium' );
+              }
+              ?>" />
+                <span class="thumb-title">FRIENDSHIP</span>
+              </div>  
+
+              <h5 class="font-weight-bold mt-3">
+                <?php the_title( ); ?>
+              </h5>
+              <p class="fs-15 font-weight-normal">
+              <?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+              </p>
+              <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
+                >Read Article</a>
+
+              <?php } ?>
+
+            </div>
+              
+          <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+                <?php 
+
                 $worldPosts = new WP_Query(array(
 
                   'posts_per_page' => 1,
-                  'category_name' => 'Health'
+                  'category_name' => 'Film'
 
                 ));
 
                 while ($worldPosts->have_posts()) {
                   $worldPosts->the_post(); ?>
 
-<div class="position-relative image-hover">
+                <div class="position-relative image-hover">
                   <img src="<?php
-if ( has_post_thumbnail() ) { 
-the_post_thumbnail( 'medium' );
-}
-?>" />
-                  <span class="thumb-title">HEALTH</span>
-            </div>  
-                
+                if ( has_post_thumbnail() ) { 
+                the_post_thumbnail( 'medium' );
+                }
+                ?>" />
+                  <span class="thumb-title">FILM</span>
+                </div>  
+
                 <h5 class="font-weight-bold mt-3">
                   <?php the_title( ); ?>
                 </h5>
@@ -45,122 +157,11 @@ the_post_thumbnail( 'medium' );
                 </p>
                 <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
                   >Read Article</a>
-              
-              <?php } ?>
+
+                <?php } ?>
 
             </div>
-              
-            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
-
-<?php 
-
-$worldPosts = new WP_Query(array(
-
-  'posts_per_page' => 1,
-  'category_name' => 'Wellness'
-
-));
-
-while ($worldPosts->have_posts()) {
-  $worldPosts->the_post(); ?>
-
-<div class="position-relative image-hover">
-  <img src="<?php
-if ( has_post_thumbnail() ) { 
-the_post_thumbnail( 'medium' );
-}
-?>" />
-  <span class="thumb-title">WELLNESS</span>
-</div>  
-
-<h5 class="font-weight-bold mt-3">
-  <?php the_title( ); ?>
-</h5>
-<p class="fs-15 font-weight-normal">
-<?php echo wp_trim_words( get_the_content(), 12 ); ?>
-
-</p>
-<a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
-  >Read Article</a>
-
-<?php } ?>
-
-</div>
-              
-<div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
-
-<?php 
-
-$worldPosts = new WP_Query(array(
-
-  'posts_per_page' => 1,
-  'category_name' => 'Friendship'
-
-));
-
-while ($worldPosts->have_posts()) {
-  $worldPosts->the_post(); ?>
-
-<div class="position-relative image-hover">
-  <img src="<?php
-if ( has_post_thumbnail() ) { 
-the_post_thumbnail( 'medium' );
-}
-?>" />
-  <span class="thumb-title">FRIENDSHIP</span>
-</div>  
-
-<h5 class="font-weight-bold mt-3">
-  <?php the_title( ); ?>
-</h5>
-<p class="fs-15 font-weight-normal">
-<?php echo wp_trim_words( get_the_content(), 12 ); ?>
-
-</p>
-<a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
-  >Read Article</a>
-
-<?php } ?>
-
-</div>
-              
-<div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
-
-<?php 
-
-$worldPosts = new WP_Query(array(
-
-  'posts_per_page' => 1,
-  'category_name' => 'Film'
-
-));
-
-while ($worldPosts->have_posts()) {
-  $worldPosts->the_post(); ?>
-
-<div class="position-relative image-hover">
-  <img src="<?php
-if ( has_post_thumbnail() ) { 
-the_post_thumbnail( 'medium' );
-}
-?>" />
-  <span class="thumb-title">FILM</span>
-</div>  
-
-<h5 class="font-weight-bold mt-3">
-  <?php the_title( ); ?>
-</h5>
-<p class="fs-15 font-weight-normal">
-<?php echo wp_trim_words( get_the_content(), 12 ); ?>
-
-</p>
-<a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
-  >Read Article</a>
-
-<?php } ?>
-
-</div>
-      </div>
+          </div>
           </div>
           
           
@@ -176,53 +177,54 @@ the_post_thumbnail( 'medium' );
             
             <div class="row">
               
-            <div class="col-lg-6  mb-5 mb-sm-2">
+              <div class="col-lg-6  mb-5 mb-sm-2">
 
-            <?php 
+                <?php 
 
-$worldPosts = new WP_Query(array(
+                  $worldPosts = new WP_Query(array(
 
-  'posts_per_page' => 1,
-  'category_name' => 'News'
+                    'posts_per_page' => 1,
+                    'category_name' => 'News'
 
-));
+                  ));
 
-while ($worldPosts->have_posts()) {
-  $worldPosts->the_post(); ?>
-                <div class="position-relative image-hover">
-                <img src="<?php
-                if(has_post_thumbnail()) the_post_thumbnail( 'large' );
- ?> " />
-                  <span class="thumb-title">NEWS</span>
-                </div>
-                <h1 class="font-weight-600 mt-3">
-                  <?php the_title( ); ?>
-                </h1>
-                <p class="fs-15 font-weight-normal">
-                  <?php echo wp_trim_words( get_the_content(), 10 ) ?>
-                </p>
-                <p>
-                <a href="<?php the_permalink( ); ?>">Continue Reading</a>
-                </p>
+                  while ($worldPosts->have_posts()) {
+                  $worldPosts->the_post(); ?>
+                  <div class="position-relative image-hover">
+                  <img src="<?php
+                  if(has_post_thumbnail()) 
+                  the_post_thumbnail( 'large' ); 
+                  ?> " />
+                    <span class="thumb-title">NEWS</span>
+                  </div>
+                  <h1 class="font-weight-600 mt-3">
+                    <?php the_title( ); ?>
+                  </h1>
+                  <p class="fs-15 font-weight-normal">
+                    <?php echo wp_trim_words( get_the_content(), 10 ) ?>
+                  </p>
+                  <p>
+                  <a href="<?php the_permalink( ); ?>">Continue Reading</a>
+                  </p>
               </div>
               
               <?php } ?>
                             
               <div class="col-lg-6  mb-5 mb-sm-2">
+                
                 <div class="row">
-                  
-                  <div class="col-sm-6  mb-5 mb-sm-2">
-
                     <?php
                     
                     $polPosts = new WP_Query(array(
-                      'posts_per_page' => 1,
+                      'posts_per_page' => 2,
                       'category_name' => 'Politics'
                     ));
 
                     while ($polPosts->have_posts()) {
                       $polPosts->the_post(); ?>
 
+                  
+                  <div class="col-sm-6  mb-5 mb-sm-2">
 
                     <div class="position-relative image-hover">
                       <img class="img-fluid" alt="world-news"
@@ -243,111 +245,35 @@ while ($worldPosts->have_posts()) {
                       <a href="<?php the_permalink( ); ?>">অ‍ারও পড়ুন</a>
                     </p>
 
+                    </div>
+                  
+                  <!-- // Picked up a chunk of code -->                 
+                
+                
+
                     <?php }
                     
                     ?>
-                    
+                </div>    
                    
 
-                  </div>
                   
-                  <div class="col-sm-6  mb-5 mb-sm-2">
-
-                         
-                    <?php
-                    
-                    $polPosts = new WP_Query(array(
-                      'posts_per_page' => 1,
-                      'category_name' => 'Travel'
-                    ));
-
-                    while ($polPosts->have_posts()) {
-                      $polPosts->the_post(); ?>
-
-
-                    <div class="position-relative image-hover">
-                      <img class="img-fluid" alt="world-news"
-                        src="<?php if(has_post_thumbnail()) { 
-                          the_post_thumbnail( 'medium' );
-                         } ?>"
-                        
-                      />
-                      <span class="thumb-title">TRAVEL</span>
-                    </div>
-                    <h5 class="font-weight-600 mt-3">
-                      <?php the_title( ); ?>
-                    </h5>
-                    <p class="fs-15 font-weight-normal">
-                      <?php echo wp_trim_words( get_the_content(), 5 ) ?>
-                    </p>
-                    <p>
-                      <a href="<?php the_permalink( ); ?>">অ‍ারও পড়ুন</a>
-                    </p>
-
-                    <?php }
-                    
-                    ?>
-
-
-                  </div>                 
-                
-                </div>
                 
                 
                 <div class="row mt-3">
                   
-                  <div class="col-sm-6  mb-5 mb-sm-2">
+                  
                     
                   <?php
                     
                     $polPosts = new WP_Query(array(
-                      'posts_per_page' => 1,
-                      'category_name' => 'Politics'
-                    ));
-
-                    while ($polPosts->have_posts()) {
-                      $polPosts->the_post(); ?>
-
-
-                    <div class="position-relative image-hover">
-                      <img class="img-fluid" alt="world-news"
-                        src="<?php if(has_post_thumbnail()) { 
-                          the_post_thumbnail( 'medium' );
-                         } ?>"
-                        
-                      />
-                      <span class="thumb-title">POLITICS</span>
-                    </div>
-                    <h5 class="font-weight-600 mt-3">
-                      <?php the_title( ); ?>
-                    </h5>
-                    <p class="fs-15 font-weight-normal">
-                      <?php echo wp_trim_words( get_the_content(), 5 ) ?>
-                    </p>
-                    <p>
-                      <a href="<?php the_permalink( ); ?>">অ‍ারও পড়ুন</a>
-                    </p>
-
-                    <?php }
-                    
-                    ?>
-                  
-                  
-                  </div>
-                  
-                  
-                  <div class="col-sm-6">
-                    
-                  <?php
-                    
-                    $polPosts = new WP_Query(array(
-                      'posts_per_page' => 1,
+                      'posts_per_page' => 2,
                       'category_name' => 'Travel'
                     ));
 
                     while ($polPosts->have_posts()) {
                       $polPosts->the_post(); ?>
-
+                    <div class="col-sm-6  mb-5 mb-sm-2">
 
                     <div class="position-relative image-hover">
                       <img class="img-fluid" alt="world-news"
@@ -367,13 +293,11 @@ while ($worldPosts->have_posts()) {
                     <p>
                       <a href="<?php the_permalink( ); ?>">অ‍ারও পড়ুন</a>
                     </p>
-
+                    </div>
                     <?php }
                     
                     ?>
-                  
-                  
-                  </div>
+
                 </div>
               </div>
             
