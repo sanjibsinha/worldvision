@@ -43,7 +43,7 @@ the_post_thumbnail( 'medium' );
                 <?php echo wp_trim_words( get_the_content(), 12 ); ?>
 
                 </p>
-                <a href="#" class="font-weight-bold text-dark pt-2"
+                <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
                   >Read Article</a>
               
               <?php } ?>
@@ -80,7 +80,7 @@ the_post_thumbnail( 'medium' );
 <?php echo wp_trim_words( get_the_content(), 12 ); ?>
 
 </p>
-<a href="#" class="font-weight-bold text-dark pt-2"
+<a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
   >Read Article</a>
 
 <?php } ?>
@@ -117,7 +117,7 @@ the_post_thumbnail( 'medium' );
 <?php echo wp_trim_words( get_the_content(), 12 ); ?>
 
 </p>
-<a href="#" class="font-weight-bold text-dark pt-2"
+<a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
   >Read Article</a>
 
 <?php } ?>
@@ -154,7 +154,7 @@ the_post_thumbnail( 'medium' );
 <?php echo wp_trim_words( get_the_content(), 12 ); ?>
 
 </p>
-<a href="#" class="font-weight-bold text-dark pt-2"
+<a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
   >Read Article</a>
 
 <?php } ?>
@@ -177,24 +177,36 @@ the_post_thumbnail( 'medium' );
             <div class="row">
               
             <div class="col-lg-6  mb-5 mb-sm-2">
+
+            <?php 
+
+$worldPosts = new WP_Query(array(
+
+  'posts_per_page' => 1,
+  'category_name' => 'News'
+
+));
+
+while ($worldPosts->have_posts()) {
+  $worldPosts->the_post(); ?>
                 <div class="position-relative image-hover">
-                  <img
-                    src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/glob.jpg"
-                    class="img-fluid"
-                    alt="world-news"
-                  />
+                <img src="<?php
+                if(has_post_thumbnail()) the_post_thumbnail( 'large' );
+ ?> " />
                   <span class="thumb-title">NEWS</span>
                 </div>
                 <h1 class="font-weight-600 mt-3">
-                  Melania Trump speaks about courage at State Department
+                  <?php the_title( ); ?>
                 </h1>
                 <p class="fs-15 font-weight-normal">
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s, when an unknown printer took a galley of type
-                  and
+                  <?php echo wp_trim_words( get_the_content(), 10 ) ?>
+                </p>
+                <p>
+                <a href="<?php the_permalink( ); ?>">Continue Reading</a>
                 </p>
               </div>
               
+              <?php } ?>
               
               <div class="col-lg-6  mb-5 mb-sm-2">
                 <div class="row">
