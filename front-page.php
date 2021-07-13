@@ -207,82 +207,172 @@ while ($worldPosts->have_posts()) {
               </div>
               
               <?php } ?>
-              
+                            
               <div class="col-lg-6  mb-5 mb-sm-2">
                 <div class="row">
                   
                   <div class="col-sm-6  mb-5 mb-sm-2">
+
+                    <?php
                     
-                   <div class="position-relative image-hover">
-                      <img
-                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-5.jpg"
-                        class="img-fluid"
-                        alt="world-news"
+                    $polPosts = new WP_Query(array(
+                      'posts_per_page' => 1,
+                      'category_name' => 'Politics'
+                    ));
+
+                    while ($polPosts->have_posts()) {
+                      $polPosts->the_post(); ?>
+
+
+                    <div class="position-relative image-hover">
+                      <img class="img-fluid" alt="world-news"
+                        src="<?php if(has_post_thumbnail()) { 
+                          the_post_thumbnail( 'medium' );
+                         } ?>"
+                        
                       />
                       <span class="thumb-title">POLITICS</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                      A look at California's eerie plane graveyards
+                      <?php the_title( ); ?>
                     </h5>
                     <p class="fs-15 font-weight-normal">
-                      Lorem Ipsum has been the industry's standard dummy text
+                      <?php echo wp_trim_words( get_the_content(), 5 ) ?>
                     </p>
+                    <p>
+                      <a href="<?php the_permalink( ); ?>">অ‍ারও পড়ুন</a>
+                    </p>
+
+                    <?php }
+                    
+                    ?>
+                    
+                   
 
                   </div>
                   
-                  <!-- <div class="col-sm-6  mb-5 mb-sm-2">
+                  <div class="col-sm-6  mb-5 mb-sm-2">
+
+                         
+                    <?php
+                    
+                    $polPosts = new WP_Query(array(
+                      'posts_per_page' => 1,
+                      'category_name' => 'Travel'
+                    ));
+
+                    while ($polPosts->have_posts()) {
+                      $polPosts->the_post(); ?>
+
+
                     <div class="position-relative image-hover">
-                      <img
-                        src="<?php // bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-6.jpg"
-                        class="img-fluid"
-                        alt="world-news"
+                      <img class="img-fluid" alt="world-news"
+                        src="<?php if(has_post_thumbnail()) { 
+                          the_post_thumbnail( 'medium' );
+                         } ?>"
+                        
                       />
                       <span class="thumb-title">TRAVEL</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                      The world's most beautiful racecourses
+                      <?php the_title( ); ?>
                     </h5>
                     <p class="fs-15 font-weight-normal">
-                      Lorem Ipsum has been the industry's standard dummy text
+                      <?php echo wp_trim_words( get_the_content(), 5 ) ?>
                     </p>
-                  </div> -->
-                
+                    <p>
+                      <a href="<?php the_permalink( ); ?>">অ‍ারও পড়ুন</a>
+                    </p>
+
+                    <?php }
+                    
+                    ?>
+
+
+                  </div>                 
                 
                 </div>
                 
                 
                 <div class="row mt-3">
+                  
                   <div class="col-sm-6  mb-5 mb-sm-2">
+                    
+                  <?php
+                    
+                    $polPosts = new WP_Query(array(
+                      'posts_per_page' => 1,
+                      'category_name' => 'Politics'
+                    ));
+
+                    while ($polPosts->have_posts()) {
+                      $polPosts->the_post(); ?>
+
+
                     <div class="position-relative image-hover">
-                      <img
-                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-7.jpg"
-                        class="img-fluid"
-                        alt="world-news"
+                      <img class="img-fluid" alt="world-news"
+                        src="<?php if(has_post_thumbnail()) { 
+                          the_post_thumbnail( 'medium' );
+                         } ?>"
+                        
                       />
                       <span class="thumb-title">POLITICS</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                      Japan cancels cherry blossom festivals over virus fears
+                      <?php the_title( ); ?>
                     </h5>
                     <p class="fs-15 font-weight-normal">
-                      Lorem Ipsum has been the industry's standard dummy text
+                      <?php echo wp_trim_words( get_the_content(), 5 ) ?>
                     </p>
+                    <p>
+                      <a href="<?php the_permalink( ); ?>">অ‍ারও পড়ুন</a>
+                    </p>
+
+                    <?php }
+                    
+                    ?>
+                  
+                  
                   </div>
+                  
+                  
                   <div class="col-sm-6">
+                    
+                  <?php
+                    
+                    $polPosts = new WP_Query(array(
+                      'posts_per_page' => 1,
+                      'category_name' => 'Travel'
+                    ));
+
+                    while ($polPosts->have_posts()) {
+                      $polPosts->the_post(); ?>
+
+
                     <div class="position-relative image-hover">
-                      <img
-                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-8.jpg"
-                        class="img-fluid"
-                        alt="world-news"
+                      <img class="img-fluid" alt="world-news"
+                        src="<?php if(has_post_thumbnail()) { 
+                          the_post_thumbnail( 'medium' );
+                         } ?>"
+                        
                       />
                       <span class="thumb-title">TRAVEL</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                      Classic cars reborn as electric vehicles
+                      <?php the_title( ); ?>
                     </h5>
                     <p class="fs-15 font-weight-normal">
-                      Lorem Ipsum has been the industry's standard dummy text
+                      <?php echo wp_trim_words( get_the_content(), 5 ) ?>
                     </p>
+                    <p>
+                      <a href="<?php the_permalink( ); ?>">অ‍ারও পড়ুন</a>
+                    </p>
+
+                    <?php }
+                    
+                    ?>
+                  
+                  
                   </div>
                 </div>
               </div>
