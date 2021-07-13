@@ -210,10 +210,8 @@ while ($worldPosts->have_posts()) {
               
               <div class="col-lg-6  mb-5 mb-sm-2">
                 <div class="row">
-                  
                   <div class="col-sm-6  mb-5 mb-sm-2">
-                    
-                   <div class="position-relative image-hover">
+                    <div class="position-relative image-hover">
                       <img
                         src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-5.jpg"
                         class="img-fluid"
@@ -227,13 +225,11 @@ while ($worldPosts->have_posts()) {
                     <p class="fs-15 font-weight-normal">
                       Lorem Ipsum has been the industry's standard dummy text
                     </p>
-
                   </div>
-                  
-                  <!-- <div class="col-sm-6  mb-5 mb-sm-2">
+                  <div class="col-sm-6  mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
                       <img
-                        src="<?php // bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-6.jpg"
+                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-6.jpg"
                         class="img-fluid"
                         alt="world-news"
                       />
@@ -245,9 +241,7 @@ while ($worldPosts->have_posts()) {
                     <p class="fs-15 font-weight-normal">
                       Lorem Ipsum has been the industry's standard dummy text
                     </p>
-                  </div> -->
-                
-                
+                  </div>
                 </div>
                 
                 
