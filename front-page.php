@@ -394,16 +394,16 @@
               
               
               <div class="col-lg-3">
-                <div class="position-relative mb-3">
+                <!-- <div class="position-relative mb-3">
                   <img
-                    src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-15.jpg"
+                    src="<?php //bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-15.jpg"
                     class="img-fluid"
                     alt="world-news"
                   />
                   <div class="video-thumb text-muted">
                     <span><i class="mdi mdi-menu-right"></i></span>LIVE
                   </div>
-                </div>
+                </div> -->
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="d-flex position-relative float-left">
@@ -413,7 +413,7 @@
                   <?php 
 
                   $newsPosts = new WP_Query(array(
-                    'posts_per_page' => 7,
+                    'posts_per_page' => 10,
                     'category_name' => 'Others'
                   ));
                   
@@ -426,9 +426,9 @@
                         <?php the_title( ); ?>
                       </h5>
                       <p class="text-color m-0 d-flex align-items-center">
-                        <span class="fs-10 mr-1">2 hours ago</span>
+                        <span class="fs-10 mr-1"><?php ?><?php echo rand(1, 12); ?> minutes ago</span>
                         <i class="mdi mdi-bookmark-outline mr-3"></i>
-                        <span class="fs-10 mr-1">126</span>
+                        <span class="fs-10 mr-1"><?php echo rand(5, 200); ?></span>
                         <i class="mdi mdi-comment-outline"></i>
                       </p>
                     </div>

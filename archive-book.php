@@ -1,8 +1,9 @@
 <?php
 
 get_header(); ?>
+<main class="container">
 
-<div class="page-banner">
+<!-- <div class="page-banner"> -->
   
   <div class="page-banner__content container container--narrow">
     <h1 class="page-banner__title">পরিবেশ নিয়ে অ‍ারও খবর</h1>
@@ -22,14 +23,24 @@ get_header(); ?>
               <span class="event-summary__day"><?php the_time( 'y' ) ?></span>
       </a>
       <div class="event-summary__content">
-        <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-        <p><?php echo wp_trim_words( get_the_content(), 7 ) ?> <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
+      <h1 class="font-weight-600 mt-3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+        <p><?php echo wp_trim_words( get_the_content(), 7 ) ?> 
+        <p>
+        <a href="<?php the_permalink(); ?>" class="nu gray">
+        অ‍ারও পড়ুন
+      </a></p>
+
+        </p>
       </div>
     </div>
   <?php }
   echo paginate_links();
 ?>
-</div>
+
+  
+
+	</div>
+</main>
 
 <?php get_footer();
 

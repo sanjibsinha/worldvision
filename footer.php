@@ -52,33 +52,15 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="d-flex justify-content-between">
-                  <img src="<?php bloginfo( 'template_url' ); ?>/images/logo.svg" class="footer-logo" alt="" />
+                <a class="navbar-brand" href="<?php echo site_url( '/' ); ?>"
+                    ><h1 class="font-weight-600 mt-3">পৃথিবীর অ‍াটচালা</h1></a>
 
                   <div class="d-flex justify-content-end footer-social">
                     <h5 class="m-0 font-weight-600 mr-3 d-none d-lg-flex">Follow on</h5>
                     <ul class="social-media">
+                      
                       <li>
-                        <a href="#">
-                          <i class="mdi mdi-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="mdi mdi-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="mdi mdi-youtube"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="mdi mdi-linkedin"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
+                        <a href="https://twitter.com/sanjibsinha">
                           <i class="mdi mdi-twitter"></i>
                         </a>
                       </li>
@@ -102,7 +84,9 @@
                     <li><a href="#">Sitemap</a></li>
                   </ul>
                   <p class="font-weight-medium">
-                    © 2020 <a href="https://www.bootstrapdash.com/" target="_blank" class="text-dark">@ BootstrapDash</a>, Inc.All Rights Reserved.
+                    © <?php echo get_the_date( ); ?> 
+                    <a href="https://sanjibsinha.com/" target="_blank" class="text-dark">
+                    @ Sanjib Sinha</a>, CopyLeft.
                   </p>
                 </div>
               </div>

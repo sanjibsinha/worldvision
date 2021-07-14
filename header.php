@@ -38,7 +38,7 @@
               <div class="d-flex justify-content-between align-items-center navbar-top">
                 <ul class="navbar-left">
                   <li><?php echo get_the_date( ); ?></li>
-                  <li>30°C,London</li>
+                  
                 </ul>
                 <div>
                   <a class="navbar-brand" href="<?php echo site_url( '/' ); ?>"
@@ -58,27 +58,7 @@
                   </ul>
                   <ul class="social-media">
                     <li>
-                      <a href="#">
-                        <i class="mdi mdi-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-youtube"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="mdi mdi-linkedin"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
+                      <a href="https://twitter.com/sanjibsinha">
                         <i class="mdi mdi-twitter"></i>
                       </a>
                     </li>

@@ -49,3 +49,7 @@ function sinha_book_init() {
 
 	register_post_type( 'book', $args );
 }
+
+
+
+     
