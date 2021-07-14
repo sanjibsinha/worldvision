@@ -410,10 +410,20 @@
                       <h3 class="section-title">Latest News</h3>
                     </div>
                   </div>
+                  <?php 
+
+                  $newsPosts = new WP_Query(array(
+                    'posts_per_page' => 7,
+                    'category_name' => 'Others'
+                  ));
+                  
+                  while ($newsPosts->have_posts()) {
+                    $newsPosts->the_post(  ); ?>
+
                   <div class="col-sm-12">
                     <div class="border-bottom pb-3">
                       <h5 class="font-weight-600 mt-0 mb-0">
-                        South Korea’s Moon Jae-in sworn in vowing address
+                        <?php the_title( ); ?>
                       </h5>
                       <p class="text-color m-0 d-flex align-items-center">
                         <span class="fs-10 mr-1">2 hours ago</span>
@@ -423,7 +433,13 @@
                       </p>
                     </div>
                   </div>
-                  <div class="col-sm-12">
+
+
+
+
+                  <?php } ?>
+                  
+                  <!-- <div class="col-sm-12">
                     <div class="border-bottom pt-4 pb-3">
                       <h5 class="font-weight-600 mt-0 mb-0">
                         South Korea’s Moon Jae-in sworn in vowing address
@@ -435,8 +451,8 @@
                         <i class="mdi mdi-comment-outline"></i>
                       </p>
                     </div>
-                  </div>
-                  <div class="col-sm-12">
+                  </div> -->
+                  <!-- <div class="col-sm-12">
                     <div class="border-bottom pt-4 pb-3">
                       <h5 class="font-weight-600 mt-0 mb-0">
                         South Korea’s Moon Jae-in sworn in vowing address
@@ -448,8 +464,8 @@
                         <i class="mdi mdi-comment-outline"></i>
                       </p>
                     </div>
-                  </div>
-                  <div class="col-sm-12">
+                  </div> -->
+                  <!-- <div class="col-sm-12">
                     <div class="pt-4">
                       <h5 class="font-weight-600 mt-0 mb-0">
                         South Korea’s Moon Jae-in sworn in vowing address
@@ -461,7 +477,11 @@
                         <i class="mdi mdi-comment-outline"></i>
                       </p>
                     </div>
-                  </div>
+                  </div> -->
+                
+                
+                
+                
                 </div>
               </div>
             </div>
