@@ -450,30 +450,31 @@
               </div>
             </div>
 
-      <div class="row">
+        <div class="row">
 
               
-            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+            
 
                   <?php 
                   
                   $worldPosts = new WP_Query(array(
 
-                    'posts_per_page' => 1,
-                    'category_name' => 'Health'
+                    'posts_per_page' => 4,
+                    'post_type' => 'book'
 
                   ));
 
                       while ($worldPosts->have_posts()) {
                       $worldPosts->the_post(); ?>
-
+                
+                <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
                                         <img src="<?php
                       if ( has_post_thumbnail() ) { 
                       the_post_thumbnail( 'medium' );
                       }
                       ?>" />
-                        <span class="thumb-title">HEALTH</span>
+                        <span class="thumb-title">UNIVERSE</span>
                     </div>  
                   
                   <h5 class="font-weight-bold mt-3">
@@ -485,124 +486,20 @@
                   </p>
                   <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
                     >Read Article</a>
+
+                </div>  
                 
                 <?php } ?>
 
-            </div>
               
-            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
-
-              <?php 
-
-              $worldPosts = new WP_Query(array(
-
-                'posts_per_page' => 1,
-                'category_name' => 'Wellness'
-
-              ));
-
-              while ($worldPosts->have_posts()) {
-                $worldPosts->the_post(); ?>
-
-              <div class="position-relative image-hover">
-                <img src="<?php
-              if ( has_post_thumbnail() ) { 
-              the_post_thumbnail( 'medium' );
-              }
-              ?>" />
-                <span class="thumb-title">WELLNESS</span>
-              </div>  
-
-              <h5 class="font-weight-bold mt-3">
-                <?php the_title( ); ?>
-              </h5>
-              <p class="fs-15 font-weight-normal">
-              <?php echo wp_trim_words( get_the_content(), 12 ); ?>
-
-              </p>
-              <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
-                >Read Article</a>
-
-              <?php } ?>
-
-            </div>
               
-            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
-
-              <?php 
-
-              $worldPosts = new WP_Query(array(
-
-                'posts_per_page' => 1,
-                'category_name' => 'Friendship'
-
-              ));
-
-              while ($worldPosts->have_posts()) {
-                $worldPosts->the_post(); ?>
-
-              <div class="position-relative image-hover">
-                <img src="<?php
-              if ( has_post_thumbnail() ) { 
-              the_post_thumbnail( 'medium' );
-              }
-              ?>" />
-                <span class="thumb-title">FRIENDSHIP</span>
-              </div>  
-
-              <h5 class="font-weight-bold mt-3">
-                <?php the_title( ); ?>
-              </h5>
-              <p class="fs-15 font-weight-normal">
-              <?php echo wp_trim_words( get_the_content(), 12 ); ?>
-
-              </p>
-              <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
-                >Read Article</a>
-
-              <?php } ?>
-
-            </div>
-              
-          <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
-
-                <?php 
-
-                $worldPosts = new WP_Query(array(
-
-                  'posts_per_page' => 1,
-                  'category_name' => 'Film'
-
-                ));
-
-                while ($worldPosts->have_posts()) {
-                  $worldPosts->the_post(); ?>
-
-                <div class="position-relative image-hover">
-                  <img src="<?php
-                if ( has_post_thumbnail() ) { 
-                the_post_thumbnail( 'medium' );
-                }
-                ?>" />
-                  <span class="thumb-title">FILM</span>
-                </div>  
-
-                <h5 class="font-weight-bold mt-3">
-                  <?php the_title( ); ?>
-                </h5>
-                <p class="fs-15 font-weight-normal">
-                <?php echo wp_trim_words( get_the_content(), 12 ); ?>
-
-                </p>
-                <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
-                  >Read Article</a>
-
-                <?php } ?>
+            
 
             </div>
           </div>
         </div>
-        </div>
+        
+      </div>
         <!-- main-panel ends -->
         <!-- container-scroller ends -->
 
