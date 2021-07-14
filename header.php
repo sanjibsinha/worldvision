@@ -41,9 +41,8 @@
                   <li>30°C,London</li>
                 </ul>
                 <div>
-                  <a class="navbar-brand" href="#"
-                    ><img src="<?php bloginfo( 'template_url' ); ?>/images/logo.svg" alt=""
-                  /></a>
+                  <a class="navbar-brand" href="<?php echo site_url( '/' ); ?>"
+                    ><h1 class="font-weight-600 mt-3">পৃথিবীর অ‍াটচালা</h1></a>
                 </div>
                 <div class="d-flex">
                   <ul class="navbar-right">

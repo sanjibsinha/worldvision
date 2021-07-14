@@ -317,91 +317,82 @@
                 </div>
               </div>
             </div>
+            
             <div class="row">
               <div class="col-lg-9">
                 <div class="row">
+
+                <?php
+
+                $lifePosts = new WP_Query(array(
+                  'posts_per_page' => 3,
+                  'category_name' => 'Lifestyle'
+                ));
+
+                while ($lifePosts->have_posts()) {
+                  $lifePosts->the_post(); ?>
+
                   <div class="col-sm-4  mb-5 mb-sm-2">
                     <div class="position-relative image-hover">
-                      <img
-                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-9.jpg"
-                        class="img-fluid"
+                      <img class="img-fluid"
                         alt="world-news"
+                        src="
+                        <?php if(has_post_thumbnail( )) {
+                          the_post_thumbnail( 'medium');
+                        } ?>
+                        "
+                        
                       />
                       <span class="thumb-title">LIFESTYLE</span>
                     </div>
                     <h5 class="font-weight-600 mt-3">
-                      The island country that gave Mayor Pete his name
+                    <a href="<?php the_permalink(  ); ?>"><?php the_title( ); ?></a>
                     </h5>
-                  </div>
-                  <div class="col-sm-4 mb-5 mb-sm-2">
-                    <div class="position-relative image-hover">
-                      <img
-                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-10.jpg"
-                        class="img-fluid"
-                        alt="world-news"
-                      />
-                      <span class="thumb-title">SPORTS</span>
-                    </div>
-                    <h5 class="font-weight-600 mt-3">
-                      Disney parks expand (good) vegan food options
-                    </h5>
-                  </div>
-                  <div class="col-sm-4 mb-5 mb-sm-2">
-                    <div class="position-relative image-hover">
-                      <img
-                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-11.jpg"
-                        class="img-fluid"
-                        alt="world-news"
-                      />
-                      <span class="thumb-title">INTERNET</span>
-                    </div>
-                    <h5 class="font-weight-600 mt-3">
-                      A hot springs where clothing is optional after dark
-                    </h5>
-                  </div>
+                  </div>                
+                <?php } ?>
+                  
+                
+                  
+                  <!-- // removed two chunks of code  -->
+                
+                
                 </div>
+                
+                
                 <div class="row mt-3">
-                  <div class="col-sm-4 mb-5 mb-sm-2">
-                    <div class="position-relative image-hover">
-                      <img
-                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-12.jpg"
-                        class="img-fluid"
-                        alt="world-news"
-                      />
-                      <span class="thumb-title">NEWS</span>
-                    </div>
-                    <h5 class="font-weight-600 mt-3">
-                      Japanese chef carves food into incredible pieces of art
-                    </h5>
-                  </div>
-                  <div class="col-sm-4 mb-5 mb-sm-2">
-                    <div class="position-relative image-hover">
-                      <img
-                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-13.jpg"
-                        class="img-fluid"
-                        alt="world-news"
-                      />
-                      <span class="thumb-title">NEWS</span>
-                    </div>
-                    <h5 class="font-weight-600 mt-3">
-                      The Misanthrope Society: A Taipei bar for people who
-                    </h5>
-                  </div>
-                  <div class="col-sm-4 mb-5 mb-sm-2">
-                    <div class="position-relative image-hover">
-                      <img
-                        src="<?php bloginfo( 'template_url' ); ?>/images/dashboard/star-magazine-14.jpg"
-                        class="img-fluid"
-                        alt="world-news"
-                      />
-                      <span class="thumb-title">TOURISM</span>
-                    </div>
-                    <h5 class="font-weight-600 mt-3">
-                      From Pakistan to the Caribbean: Curry's journey
-                    </h5>
-                  </div>
+
+                        <?php
+                        
+                        $intNews = new WP_Query(array(
+                          'posts_per_page' => 3,
+                          'category_name' => 'Internet'
+                        ));
+
+                        while ($intNews->have_posts()) {
+                          $intNews->the_post(); ?>
+
+                        <div class="col-sm-4 mb-5 mb-sm-2">
+                          <div class="position-relative image-hover">
+                            <img class="img-fluid"
+                              alt="world-news"
+                              src="<?php if(has_post_thumbnail( )) {
+                                the_post_thumbnail( 'medium' );
+                              } ?>"
+                              
+                            />
+                            <span class="thumb-title">INTERNET</span>
+                          </div>
+                          <h5 class="font-weight-600 mt-3">
+                            <a href="<?php the_permalink(  ); ?>"><?php the_title( ); ?></a>
+                          </h5>
+                        </div>
+
+                       <?php } ?>
+                
                 </div>
               </div>
+              
+              
               <div class="col-lg-3">
                 <div class="position-relative mb-3">
                   <img
