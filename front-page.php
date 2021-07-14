@@ -162,7 +162,7 @@
 
             </div>
           </div>
-          </div>
+        </div>
           
           
           <div class="editors-news">
@@ -434,60 +434,178 @@
                     </div>
                   </div>
 
-
-
-
                   <?php } ?>
                   
-                  <!-- <div class="col-sm-12">
-                    <div class="border-bottom pt-4 pb-3">
-                      <h5 class="font-weight-600 mt-0 mb-0">
-                        South Korea’s Moon Jae-in sworn in vowing address
-                      </h5>
-                      <p class="text-color m-0 d-flex align-items-center">
-                        <span class="fs-10 mr-1">2 hours ago</span>
-                        <i class="mdi mdi-bookmark-outline mr-3"></i>
-                        <span class="fs-10 mr-1">126</span>
-                        <i class="mdi mdi-comment-outline"></i>
-                      </p>
-                    </div>
-                  </div> -->
-                  <!-- <div class="col-sm-12">
-                    <div class="border-bottom pt-4 pb-3">
-                      <h5 class="font-weight-600 mt-0 mb-0">
-                        South Korea’s Moon Jae-in sworn in vowing address
-                      </h5>
-                      <p class="text-color m-0 d-flex align-items-center">
-                        <span class="fs-10 mr-1">2 hours ago</span>
-                        <i class="mdi mdi-bookmark-outline mr-3"></i>
-                        <span class="fs-10 mr-1">126</span>
-                        <i class="mdi mdi-comment-outline"></i>
-                      </p>
-                    </div>
-                  </div> -->
-                  <!-- <div class="col-sm-12">
-                    <div class="pt-4">
-                      <h5 class="font-weight-600 mt-0 mb-0">
-                        South Korea’s Moon Jae-in sworn in vowing address
-                      </h5>
-                      <p class="text-color m-0 d-flex align-items-center">
-                        <span class="fs-10 mr-1">2 hours ago</span>
-                        <i class="mdi mdi-bookmark-outline mr-3"></i>
-                        <span class="fs-10 mr-1">126</span>
-                        <i class="mdi mdi-comment-outline"></i>
-                      </p>
-                    </div>
-                  </div> -->
-                
-                
-                
-                
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="world-news">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="d-flex position-relative  float-left">
+                  <h3 class="section-title">World News</h3>
+                </div>
+              </div>
+            </div>
+
+      <div class="row">
+
+              
+            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+                  <?php 
+                  
+                  $worldPosts = new WP_Query(array(
+
+                    'posts_per_page' => 1,
+                    'category_name' => 'Health'
+
+                  ));
+
+                      while ($worldPosts->have_posts()) {
+                      $worldPosts->the_post(); ?>
+
+                    <div class="position-relative image-hover">
+                                        <img src="<?php
+                      if ( has_post_thumbnail() ) { 
+                      the_post_thumbnail( 'medium' );
+                      }
+                      ?>" />
+                        <span class="thumb-title">HEALTH</span>
+                    </div>  
+                  
+                  <h5 class="font-weight-bold mt-3">
+                    <?php the_title( ); ?>
+                  </h5>
+                  <p class="fs-15 font-weight-normal">
+                  <?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+                  </p>
+                  <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
+                    >Read Article</a>
+                
+                <?php } ?>
+
+            </div>
+              
+            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+              <?php 
+
+              $worldPosts = new WP_Query(array(
+
+                'posts_per_page' => 1,
+                'category_name' => 'Wellness'
+
+              ));
+
+              while ($worldPosts->have_posts()) {
+                $worldPosts->the_post(); ?>
+
+              <div class="position-relative image-hover">
+                <img src="<?php
+              if ( has_post_thumbnail() ) { 
+              the_post_thumbnail( 'medium' );
+              }
+              ?>" />
+                <span class="thumb-title">WELLNESS</span>
+              </div>  
+
+              <h5 class="font-weight-bold mt-3">
+                <?php the_title( ); ?>
+              </h5>
+              <p class="fs-15 font-weight-normal">
+              <?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+              </p>
+              <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
+                >Read Article</a>
+
+              <?php } ?>
+
+            </div>
+              
+            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+              <?php 
+
+              $worldPosts = new WP_Query(array(
+
+                'posts_per_page' => 1,
+                'category_name' => 'Friendship'
+
+              ));
+
+              while ($worldPosts->have_posts()) {
+                $worldPosts->the_post(); ?>
+
+              <div class="position-relative image-hover">
+                <img src="<?php
+              if ( has_post_thumbnail() ) { 
+              the_post_thumbnail( 'medium' );
+              }
+              ?>" />
+                <span class="thumb-title">FRIENDSHIP</span>
+              </div>  
+
+              <h5 class="font-weight-bold mt-3">
+                <?php the_title( ); ?>
+              </h5>
+              <p class="fs-15 font-weight-normal">
+              <?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+              </p>
+              <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
+                >Read Article</a>
+
+              <?php } ?>
+
+            </div>
+              
+          <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+
+                <?php 
+
+                $worldPosts = new WP_Query(array(
+
+                  'posts_per_page' => 1,
+                  'category_name' => 'Film'
+
+                ));
+
+                while ($worldPosts->have_posts()) {
+                  $worldPosts->the_post(); ?>
+
+                <div class="position-relative image-hover">
+                  <img src="<?php
+                if ( has_post_thumbnail() ) { 
+                the_post_thumbnail( 'medium' );
+                }
+                ?>" />
+                  <span class="thumb-title">FILM</span>
+                </div>  
+
+                <h5 class="font-weight-bold mt-3">
+                  <?php the_title( ); ?>
+                </h5>
+                <p class="fs-15 font-weight-normal">
+                <?php echo wp_trim_words( get_the_content(), 12 ); ?>
+
+                </p>
+                <a href="<?php the_permalink( ); ?>" class="font-weight-bold text-dark pt-2"
+                  >Read Article</a>
+
+                <?php } ?>
+
+            </div>
+          </div>
+        </div>
         </div>
         <!-- main-panel ends -->
         <!-- container-scroller ends -->
+
+        
 
       <?php get_footer( ); ?>
