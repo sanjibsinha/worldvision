@@ -25,6 +25,11 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/bootstrap.css">
     <!-- endinject -->
+    <style>
+      .illustration {
+        width: 100%;
+      }
+    </style>
     <?php wp_head(  ); ?>
   </head>
 
